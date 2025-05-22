@@ -1,7 +1,10 @@
 package org.example.Problems.AmazonLocker;
 
+/**
+ * Represents a delivery person responsible for delivering and collecting locker items.
+ */
 public class DeliveryPerson {
-    private int id;
+    private final int id;
     private String name;
     private String contact;
 
@@ -13,10 +16,6 @@ public class DeliveryPerson {
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -33,5 +32,14 @@ public class DeliveryPerson {
 
     public void setContact(String contact) {
         this.contact = contact;
+    }
+
+    @Override
+    public String toString() {
+        return "DeliveryPerson{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", contact='" + contact + '\'' +
+                '}';
     }
 }

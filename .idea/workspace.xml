@@ -6,8 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="f82652bb-04d3-4a6f-9f7f-ae87730ba03b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LowLevelDesign/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/target/classes/org/example/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/DeliveryPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/DeliveryPerson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/Locker.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/Locker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/LockerItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/LockerItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/LockerItemStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/LockerItemStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/LockerStrategyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/LockerStrategyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/NotificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/OtpGenerationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/OtpGenerationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/Slot.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/Slot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/SlotStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/SlotStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/SlotStrategyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/SlotStrategyService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +59,7 @@
     "Application.Main.executor": "Run",
     "Application.MeetingSchedulerMain.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "ft-amazon-locker",
+    "git-widget-placeholder": "fx-amazon-locker",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "/Users/koushikshanker/LLD/LowLevelDesign/src/main/java/org/example/Main.java"
   }
