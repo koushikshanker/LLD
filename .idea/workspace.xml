@@ -7,11 +7,7 @@
     <list default="true" id="f82652bb-04d3-4a6f-9f7f-ae87730ba03b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/MeetingScheduler/BookingStrategy/BookingStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/MeetingScheduler/BookingStrategy/BookingStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/MeetingScheduler/BookingStrategy/MinHeapBookingStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/MeetingScheduler/BookingStrategy/MinHeapBookingStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/MeetingScheduler/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/MeetingScheduler/MeetingSchedulerMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/MeetingScheduler/MeetingScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/MeetingScheduler/MeetingScheduler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/MeetingScheduler/UserObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/MeetingScheduler/UserObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowLevelDesign/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/target/classes/org/example/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,11 +51,16 @@
     "Application.Main.executor": "Run",
     "Application.MeetingSchedulerMain.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "ft-meeting-scheduler",
+    "git-widget-placeholder": "ft-amazon-locker",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "/Users/koushikshanker/LLD/LowLevelDesign/src/main/java/org/example/Main.java"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.Problems.AmazonLocker" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
@@ -103,6 +104,30 @@
           <url>file://$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/MeetingScheduler/MeetingSchedulerMain.java</url>
           <line>35</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/AssignDeliveryPersonStrategy.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/AmazonLockerService.java</url>
+          <line>140</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/AmazonLockerService.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/AmazonLockerService.java</url>
+          <line>34</line>
+          <properties class="org.example.Problems.AmazonLocker.AmazonLockerService" method="run">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
