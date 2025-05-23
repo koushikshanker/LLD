@@ -1,146 +1,119 @@
 package org.example.Problems.AmazonLocker;
 
-import org.example.Problems.MeetingScheduler.Location;
-
-import java.util.List;
 import java.util.Objects;
-import java.util.concurrent.BlockingDeque;
 
+/**
+ * Core service class for managing Amazon Locker operations.
+ */
 public class AmazonLockerService {
 
-    LockerStrategyService lockerStrategyService;
-    OtpGenerationService otpGenerationService;
-    User user;
-    DeliveryPerson deliveryPerson;
-    LockerItem lockerItem;
-    Locker locker;
-    Slot slot;
-    String otp;
-    SlotStrategyService slotStrategyService;
-    AssignDeliveryPersonStrategy assignDeliveryPersonStrategy;
-    public AmazonLockerService()
-    {
-        user = new User(1,"Ramesh","9908");
-        deliveryPerson = new DeliveryPerson(1,"Suresh","9901");
-        slot = new Slot(1,"slot1","L");
-        locker = new Locker(1,"hydlocker","HYDERABAD");
-        locker.addSlot(slot);
-        lockerItem = new LockerItem(1,"lockerItem");
-        lockerStrategyService = new LockerStrategyService();
-        otpGenerationService = new OtpGenerationService();
-        lockerStrategyService.addLocker(locker);
-        assignDeliveryPersonStrategy = new AssignDeliveryPersonStrategy();
-        assignDeliveryPersonStrategy.addDeliveryPerson(deliveryPerson);
+    private final LockerStrategyService lockerStrategyService;
+    private final OtpGenerationService otpGenerationService;
+    private final AssignDeliveryPersonStrategy assignDeliveryPersonStrategy;
+    private final NotificationService notificationService;
+
+    public AmazonLockerService(
+            LockerStrategyService lockerStrategyService,
+            OtpGenerationService otpGenerationService,
+            AssignDeliveryPersonStrategy assignDeliveryPersonStrategy,
+            NotificationService notificationService
+    ) {
+        this.lockerStrategyService = lockerStrategyService;
+        this.otpGenerationService = otpGenerationService;
+        this.assignDeliveryPersonStrategy = assignDeliveryPersonStrategy;
+        this.notificationService = notificationService;
     }
-   public void run()
-   {
 
-
-
-       // user order a item
-       userOrdersLockerItem(user, lockerItem, "HYDERABAD");
-
-       //delivery person delivers locker item to locker
-       itemDeliveredToLocker(locker,lockerItem, slot, otp);
-
-       //user picks order from locker
-       userPicksOrderFromLocker(user, locker,slot,otp);
-
-       //user will initiate a return
-       userReturnOrder(user,"location",lockerItem);
-
-       //deliveryPerson will collect item
-       deliveryPersonPicksOrderFromLocker(deliveryPerson,locker,slot,otp);
-
-   }
-
-    private void userReturnOrder(User user, String location, LockerItem lockerItem) {
-        System.out.println("User returned order to locker");
+    /**
+     * User places an order to store an item in locker.
+     */
+    public void userOrdersLockerItem(User user, LockerItem lockerItem, String location) {
+        System.out.println("User orders an item");
         System.out.println("--------------------------------");
-        locker = lockerStrategyService.getLocker();
-        slotStrategyService = new SlotStrategyService(locker);
+
+        Locker locker = lockerStrategyService.getLocker(location);
+        if (locker == null) {
+            throw new RuntimeException("No locker found at location: " + location);
+        }
+
+        Slot slot = locker.getSlot();  // You might want a better strategy here
         lockerItem.setLocker(locker);
-        slot = slotStrategyService.getSlot();
         lockerItem.setSlot(slot);
-        otp = otpGenerationService.generateOtp();
-        NotifyUser(user,locker,slot,otp);
-        itemDeliveredToLocker(locker,lockerItem,slot,otp);
-       deliveryPerson = assignDeliveryPersonStrategy.getDeliveryPerson(lockerItem,location);
-        NotifyUser(deliveryPerson,locker,slot,otp);
+
+        String otp = otpGenerationService.generateOtp();
+
+        DeliveryPerson deliveryPerson = assignDeliveryPersonStrategy.getDeliveryPerson(lockerItem, location);
         slot.setOtp(otp);
+
+        notificationService.notifyUser(deliveryPerson, slot, otp);
+
+        System.out.println("Delivery person assigned and notified.");
     }
 
-
-
-
-    public void userOrdersLockerItem(User user, LockerItem lockerItem, String location)
-   {
-       System.out.println("User orders an item");
-       System.out.println("--------------------------------");
-       locker = lockerStrategyService.getLocker();
-       System.out.println("locker is assigned");
-       System.out.println("--------------------------------");
-       slotStrategyService = new SlotStrategyService(locker);
-       lockerItem.setLocker(locker);
-       slot = slotStrategyService.getSlot();
-       System.out.println("slot is assigned");
-       System.out.println("--------------------------------");
-       lockerItem.setSlot(slot);
-       otp = otpGenerationService.generateOtp();
-       deliveryPerson = assignDeliveryPersonStrategy.getDeliveryPerson(lockerItem,location);
-       System.out.println("Delivery person is assigned");
-       System.out.println("--------------------------------");
-       NotifyUser(deliveryPerson,locker,slot,otp);
-       slot.setOtp(otp);
-   }
-
-    private void itemDeliveredToLocker(Locker locker, LockerItem lockerItem , Slot slot, String otp) {
-        if((lockerItem.getLocker()== locker) && Objects.equals(slot.getOtp(), otp))
-        {
-            System.out.println("locker item is delivered to locker: locker");
-            System.out.println("--------------------------------");
-            slot.setLockerItem(lockerItem);
-            otp = otpGenerationService.generateOtp();
-            NotifyUser(user,locker,slot,otp);
+    /**
+     * Delivery person delivers item to locker slot.
+     */
+    public void itemDeliveredToLocker(DeliveryPerson deliveryPerson, Locker locker, LockerItem lockerItem, Slot slot, String otp) {
+        if (lockerItem.getLocker() != locker || !Objects.equals(slot.getOtp(), otp)) {
+            throw new RuntimeException("Invalid locker or OTP");
         }
-        else
-        {
-            throw new RuntimeException("wrong otp entered by delivery person");
-        }
+
+        System.out.println("Locker item delivered to locker: " + locker.getName());
+        slot.setLockerItem(lockerItem);
+        slot.setStatus(SlotStatus.OCCUPIED);
+
+        // Notify user to pick item
+        String userOtp = otpGenerationService.generateOtp();
+        slot.setOtp(userOtp);
+
+        notificationService.notifyUser(lockerItem.getUser(), slot, userOtp);
     }
 
-    private void userPicksOrderFromLocker(User user, Locker locker, Slot slot, String otp) {
-        if(Objects.equals(slot.getOtp(), otp))
-        {
+    /**
+     * User picks the order from locker slot.
+     */
+    public void userPicksOrderFromLocker(User user, Locker locker, Slot slot, String otp) {
+        if (!Objects.equals(slot.getOtp(), otp)) {
+            throw new RuntimeException("Invalid OTP for user pickup");
+        }
 
-            System.out.println("User picked item from locker");
-            System.out.println("--------------------------------");
-            slot.setStatus(SlotStatus.FREE);
-        }
-        else
-        {
-            throw new RuntimeException("wrong otp entered by delivery person");
-        }
-    }
-    private void deliveryPersonPicksOrderFromLocker(DeliveryPerson deliveryPerson, Locker locker, Slot slot, String otp) {
-        if(Objects.equals(slot.getOtp(), otp))
-        {
-            System.out.println("User received item");
-            System.out.println("--------------------------------");
-            slot.setStatus(SlotStatus.FREE);
-        }
-        else
-        {
-            throw new RuntimeException("wrong otp entered by delivery person");
-        }
-    }
-    private void NotifyUser(DeliveryPerson deliveryPerson, Locker locker, Slot slot, String otp) {
-        System.out.println("Notified delivery person with locker with slot with otp");
-        System.out.println("--------------------------------");
+        System.out.println("User picked item from locker");
+        slot.setStatus(SlotStatus.FREE);
+        slot.setLockerItem(null);
     }
 
-    private void NotifyUser(User user, Locker locker, Slot slot, String otp) {
-        System.out.println("Notified user with locker with slot with otp");
-        System.out.println("--------------------------------");
+    /**
+     * User initiates return of an item.
+     */
+    public void userReturnOrder(User user, String location, LockerItem lockerItem) {
+        System.out.println("User returned order to locker");
+        Locker locker = lockerStrategyService.getLocker(location);
+        Slot slot = locker.getSlot();
+
+        lockerItem.setLocker(locker);
+        lockerItem.setSlot(slot);
+
+        String otp = otpGenerationService.generateOtp();
+        slot.setOtp(otp);
+
+        notificationService.notifyUser(user, slot, otp);
+
+        itemDeliveredToLocker(null, locker, lockerItem, slot, otp); // DeliveryPerson can be null here if you want
+
+        DeliveryPerson deliveryPerson = assignDeliveryPersonStrategy.getDeliveryPerson(lockerItem, location);
+        notificationService.notifyUser(deliveryPerson, slot, otp);
+    }
+
+    /**
+     * Delivery person picks item from locker after return.
+     */
+    public void deliveryPersonPicksOrderFromLocker(DeliveryPerson deliveryPerson, Locker locker, Slot slot, String otp) {
+        if (!Objects.equals(slot.getOtp(), otp)) {
+            throw new RuntimeException("Invalid OTP for delivery person pickup");
+        }
+
+        System.out.println("Delivery person picked item from locker");
+        slot.setStatus(SlotStatus.FREE);
+        slot.setLockerItem(null);
     }
 }

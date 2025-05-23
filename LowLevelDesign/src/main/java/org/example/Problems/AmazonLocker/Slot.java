@@ -1,28 +1,29 @@
 package org.example.Problems.AmazonLocker;
 
+import java.util.Objects;
+
+/**
+ * Represents a single locker slot where items can be stored.
+ */
 public class Slot {
-    int id;
-    String name;
-    String size;
-    SlotStatus status;
-    LockerItem lockerItem;
-    String otp;
+    private final int id;
+    private String name;
+    private String size;
+    private SlotStatus status;
+    private LockerItem lockerItem;
+    private String otp;
 
     public Slot(int id, String name, String size) {
         this.id = id;
-        this.name = name;
-        this.size = size;
+        this.name = Objects.requireNonNull(name, "name cannot be null");
+        this.size = Objects.requireNonNull(size, "size cannot be null");
         this.status = SlotStatus.FREE;
         this.lockerItem = null;
-        this.otp=null;
+        this.otp = null;
     }
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -30,7 +31,7 @@ public class Slot {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = Objects.requireNonNull(name, "name cannot be null");
     }
 
     public String getSize() {
@@ -38,7 +39,7 @@ public class Slot {
     }
 
     public void setSize(String size) {
-        this.size = size;
+        this.size = Objects.requireNonNull(size, "size cannot be null");
     }
 
     public SlotStatus getStatus() {
@@ -46,7 +47,7 @@ public class Slot {
     }
 
     public void setStatus(SlotStatus status) {
-        this.status = status;
+        this.status = Objects.requireNonNull(status, "status cannot be null");
     }
 
     public LockerItem getLockerItem() {
@@ -63,5 +64,17 @@ public class Slot {
 
     public void setOtp(String otp) {
         this.otp = otp;
+    }
+
+    @Override
+    public String toString() {
+        return "Slot{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", size='" + size + '\'' +
+                ", status=" + status +
+                ", lockerItem=" + (lockerItem != null ? lockerItem.getName() : "null") +
+                ", otp='" + otp + '\'' +
+                '}';
     }
 }

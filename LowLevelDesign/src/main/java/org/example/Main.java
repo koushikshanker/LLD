@@ -7,7 +7,6 @@ import org.example.Problems.MeetingScheduler.User;
 
 public class Main {
     public static void main(String[] args) {
-        AmazonLockerService ms = new AmazonLockerService();
-        ms.run();
+
     }
 }
