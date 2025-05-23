@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f82652bb-04d3-4a6f-9f7f-ae87730ba03b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/FileSystemWithSearch/Search/NameSearchCriteria.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/AmazonLockerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/AmazonLockerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/LockerStrategyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/LockerStrategyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/SlotStrategyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/SlotStrategyService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,11 +50,17 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "Application.MeetingSchedulerMain.executor": "Run",
+    "Application.org.example.Problems.AmazonLocker.Main.executor": "Run",
+    "Application.org.example.Problems.AmazonLockerChatgpt.Main (1).executor": "Run",
     "Application.org.example.Problems.AmazonLockerChatgpt.Main.executor": "Run",
+    "Application.org.example.Problems.FileSystemWithSearch.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "ft-amazon-locker-chatgpt",
+    "git-widget-placeholder": "ft-file-system",
     "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "/Users/koushikshanker/LLD/LowLevelDesign/src/main/java/org/example/Main.java"
+    "onboarding.tips.debug.path": "/Users/koushikshanker/LLD/LowLevelDesign/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -65,7 +68,7 @@
       <recent name="org.example.Problems.AmazonLocker" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.org.example.Problems.AmazonLockerChatgpt.Main">
+  <component name="RunManager" selected="Application.org.example.Problems.FileSystemWithSearch.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="LowLevelDesign" />
@@ -79,7 +82,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="org.example.Problems.AmazonLockerChatgpt.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="org.example.Problems.AmazonLockerChatgpt.Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Problems.AmazonLockerChatgpt.Main" />
       <module name="LowLevelDesign" />
       <extension name="coverage">
@@ -92,10 +95,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="org.example.Problems.AmazonLockerChatgpt.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Problems.AmazonLockerChatgpt.Main" />
+      <module name="LLD" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.Problems.AmazonLockerChatgpt.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="org.example.Problems.AmazonLocker.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Problems.AmazonLocker.Main" />
+      <module name="LowLevelDesign" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.Problems.AmazonLocker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="org.example.Problems.FileSystemWithSearch.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Problems.FileSystemWithSearch.Main" />
+      <module name="LowLevelDesign" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.Problems.FileSystemWithSearch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.org.example.Problems.FileSystemWithSearch.Main" />
+        <item itemvalue="Application.org.example.Problems.AmazonLockerChatgpt.Main (1)" />
+        <item itemvalue="Application.org.example.Problems.AmazonLocker.Main" />
         <item itemvalue="Application.org.example.Problems.AmazonLockerChatgpt.Main" />
-        <item itemvalue="Application.MeetingSchedulerMain" />
       </list>
     </recent_temporary>
   </component>
@@ -137,6 +181,21 @@
           <url>file://$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/AmazonLockerService.java</url>
           <line>92</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/FileSystemWithSearch/Search/ExtensionSearchCriteria.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/FileSystemWithSearch/Core/FileSystem.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/FileSystemWithSearch/Core/FileSystem.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/AmazonLockerService.java</url>
