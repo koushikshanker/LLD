@@ -31,12 +31,12 @@ public class AmazonLockerService {
         System.out.println("User orders an item");
         System.out.println("--------------------------------");
 
-        Locker locker = lockerStrategyService.getLocker(location);
+        Locker locker = lockerStrategyService.getLocker();
         if (locker == null) {
             throw new RuntimeException("No locker found at location: " + location);
         }
 
-        Slot slot = locker.getSlot();  // You might want a better strategy here
+        Slot slot = locker.getFreeSlot();  // You might want a better strategy here
         lockerItem.setLocker(locker);
         lockerItem.setSlot(slot);
 
@@ -53,7 +53,8 @@ public class AmazonLockerService {
     /**
      * Delivery person delivers item to locker slot.
      */
-    public void itemDeliveredToLocker(DeliveryPerson deliveryPerson, Locker locker, LockerItem lockerItem, Slot slot, String otp) {
+    public void itemDeliveredToLocker(DeliveryPerson deliveryPerson,
+                                      User user, Locker locker, LockerItem lockerItem, Slot slot, String otp) {
         if (lockerItem.getLocker() != locker || !Objects.equals(slot.getOtp(), otp)) {
             throw new RuntimeException("Invalid locker or OTP");
         }
@@ -66,7 +67,7 @@ public class AmazonLockerService {
         String userOtp = otpGenerationService.generateOtp();
         slot.setOtp(userOtp);
 
-        notificationService.notifyUser(lockerItem.getUser(), slot, userOtp);
+        notificationService.notifyUser(user, slot, userOtp);
     }
 
     /**
@@ -87,8 +88,8 @@ public class AmazonLockerService {
      */
     public void userReturnOrder(User user, String location, LockerItem lockerItem) {
         System.out.println("User returned order to locker");
-        Locker locker = lockerStrategyService.getLocker(location);
-        Slot slot = locker.getSlot();
+        Locker locker = lockerStrategyService.getLocker();
+        Slot slot = locker.getFreeSlot();
 
         lockerItem.setLocker(locker);
         lockerItem.setSlot(slot);
@@ -98,7 +99,7 @@ public class AmazonLockerService {
 
         notificationService.notifyUser(user, slot, otp);
 
-        itemDeliveredToLocker(null, locker, lockerItem, slot, otp); // DeliveryPerson can be null here if you want
+        itemDeliveredToLocker(null, user, locker, lockerItem, slot, otp); // DeliveryPerson can be null here if you want
 
         DeliveryPerson deliveryPerson = assignDeliveryPersonStrategy.getDeliveryPerson(lockerItem, location);
         notificationService.notifyUser(deliveryPerson, slot, otp);

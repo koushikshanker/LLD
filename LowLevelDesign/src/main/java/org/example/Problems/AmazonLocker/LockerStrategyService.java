@@ -33,6 +33,6 @@ public class LockerStrategyService {
             throw new IllegalStateException("No lockers available");
         }
         // TODO: Implement more advanced selection strategy.
-        return lockers.get(0);
+        return lockers.getFirst();
     }
 }

@@ -47,7 +47,7 @@ public class Main {
         DeliveryPerson assignedDeliveryPerson = assignDeliveryPersonStrategy.getDeliveryPerson(item, "HYDERABAD");
         String otpForDelivery = assignedSlot.getOtp();
 
-        lockerService.itemDeliveredToLocker(assignedDeliveryPerson, assignedLocker, item, assignedSlot, otpForDelivery);
+        lockerService.itemDeliveredToLocker(assignedDeliveryPerson, user, assignedLocker, item, assignedSlot, otpForDelivery);
 
         // Simulate user picking up the item from locker
         lockerService.userPicksOrderFromLocker(user, assignedLocker, assignedSlot, assignedSlot.getOtp());
