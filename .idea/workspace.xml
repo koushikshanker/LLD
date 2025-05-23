@@ -6,15 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f82652bb-04d3-4a6f-9f7f-ae87730ba03b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/DeliveryPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/DeliveryPerson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/Locker.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/Locker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/LockerItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/LockerItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/LockerItemStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/LockerItemStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/AmazonLockerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/AmazonLockerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/LockerStrategyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/LockerStrategyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/NotificationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/OtpGenerationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/OtpGenerationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/Slot.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/Slot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/SlotStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/SlotStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/SlotStrategyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/SlotStrategyService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -58,8 +53,9 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "Application.MeetingSchedulerMain.executor": "Run",
+    "Application.org.example.Problems.AmazonLockerChatgpt.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "fx-amazon-locker",
+    "git-widget-placeholder": "ft-amazon-locker-chatgpt",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "/Users/koushikshanker/LLD/LowLevelDesign/src/main/java/org/example/Main.java"
   }
@@ -69,7 +65,7 @@
       <recent name="org.example.Problems.AmazonLocker" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.org.example.Problems.AmazonLockerChatgpt.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="LowLevelDesign" />
@@ -83,8 +79,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="org.example.Problems.AmazonLockerChatgpt.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Problems.AmazonLockerChatgpt.Main" />
+      <module name="LowLevelDesign" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.Problems.AmazonLockerChatgpt.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.org.example.Problems.AmazonLockerChatgpt.Main" />
         <item itemvalue="Application.MeetingSchedulerMain" />
       </list>
     </recent_temporary>
@@ -115,23 +125,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/AssignDeliveryPersonStrategy.java</url>
-          <line>20</line>
+          <line>28</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/AmazonLockerService.java</url>
-          <line>140</line>
+          <line>114</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/AmazonLockerService.java</url>
-          <line>79</line>
+          <line>92</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/AmazonLocker/AmazonLockerService.java</url>
-          <line>34</line>
-          <properties class="org.example.Problems.AmazonLocker.AmazonLockerService" method="run">
+          <line>25</line>
+          <properties class="org.example.Problems.AmazonLocker.AmazonLockerService">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>

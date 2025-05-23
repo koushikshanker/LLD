@@ -12,6 +12,6 @@ public class SlotStrategyService {
      * TODO: Implement a real strategy considering slot size, availability, etc.
      */
     public Slot getSlot() {
-        return locker.getSlot();
+        return locker.getFreeSlot();
     }
 }
