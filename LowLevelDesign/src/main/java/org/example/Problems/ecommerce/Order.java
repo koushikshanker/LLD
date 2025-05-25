@@ -1,87 +1,47 @@
 package org.example.Problems.ecommerce;
 
-import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
 public class Order {
-    private String id;
-    private User user;
+    private final String id;
+    private final User user;
+    private final Map<Product, Integer> productList;  // Immutable once order placed
     private OrderStatus orderStatus;
-    private Map<Product, Integer> productList;
     private PaymentStatus paymentStatus;
-    private String deliveryDetails;
+    private DeliveryInfo deliveryInfo;
     private double orderValue;
 
     public Order(User user, Map<Product, Integer> productList) {
         this.id = UUID.randomUUID().toString();
         this.user = user;
-        this.productList = productList;
+        this.productList = Map.copyOf(productList);
         this.orderStatus = OrderStatus.IN_PROGRESS;
         this.paymentStatus = PaymentStatus.INITIATED;
-        this.deliveryDetails = null;
-        this.orderValue = getOrderValue();
+        this.deliveryInfo = null;
+        this.orderValue = calculateOrderValue();
     }
 
-    public String getDeliveryDetails() {
-        return deliveryDetails;
+    private double calculateOrderValue() {
+        return productList.entrySet().stream()
+                .mapToDouble(e -> e.getKey().getPrice() * e.getValue())
+                .sum();
     }
 
-    public void setDeliveryDetails(String deliveryDetails) {
-        this.deliveryDetails = deliveryDetails;
-    }
+    // Getters and setters
 
-    public double getOrderValue() {
-        double totalPrice = 0.0;
-        for (Map.Entry<Product, Integer> entry : productList.entrySet()) {
-            Product product = entry.getKey();
-            int quantity = entry.getValue();
-            totalPrice += product.getPrice() * quantity;
-        }
-        return totalPrice;
-    }
+    public String getId() { return id; }
+    public User getUser() { return user; }
+    public Map<Product, Integer> getProductList() { return productList; }
 
-    public void setOrderValue(double orderValue) {
-        this.orderValue = orderValue;
-    }
+    public OrderStatus getOrderStatus() { return orderStatus; }
+    public void setOrderStatus(OrderStatus orderStatus) { this.orderStatus = orderStatus; }
 
-    public PaymentStatus getPaymentStatus() {
-        return paymentStatus;
-    }
+    public PaymentStatus getPaymentStatus() { return paymentStatus; }
+    public void setPaymentStatus(PaymentStatus paymentStatus) { this.paymentStatus = paymentStatus; }
 
-    public void setPaymentStatus(PaymentStatus paymentStatus) {
-        this.paymentStatus = paymentStatus;
-    }
+    public DeliveryInfo getDeliveryInfo() { return deliveryInfo; }
+    public void setDeliveryInfo(DeliveryInfo deliveryInfo) { this.deliveryInfo = deliveryInfo; }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public OrderStatus getOrderStatus() {
-        return orderStatus;
-    }
-
-    public void setOrderStatus(OrderStatus orderStatus) {
-        this.orderStatus = orderStatus;
-    }
-
-    public Map<Product,Integer> getProductList() {
-        return productList;
-    }
-
-    public void setProductList(Map<Product,Integer> productList) {
-        this.productList = productList;
-    }
+    public double getOrderValue() { return orderValue; }
 }

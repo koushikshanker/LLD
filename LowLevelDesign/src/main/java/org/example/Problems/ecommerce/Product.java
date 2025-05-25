@@ -1,9 +1,10 @@
 package org.example.Problems.ecommerce;
 
+import java.util.Objects;
 import java.util.UUID;
 
 public class Product {
-    private String id;
+    private final String id;
     private String name;
     private String details;
     private double price;
@@ -15,20 +16,8 @@ public class Product {
         this.price = price;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
     public String getId() {
         return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -45,5 +34,27 @@ public class Product {
 
     public void setDetails(String details) {
         this.details = details;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        if(price < 0) throw new IllegalArgumentException("Price cannot be negative");
+        this.price = price;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if(this == o) return true;
+        if(!(o instanceof Product)) return false;
+        Product product = (Product) o;
+        return id.equals(product.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }

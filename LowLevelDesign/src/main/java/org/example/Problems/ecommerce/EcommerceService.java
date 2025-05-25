@@ -1,80 +1,79 @@
 package org.example.Problems.ecommerce;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class EcommerceService {
-    DeliveryService deliveryService;
-    EcommerceService instance;
-    Inventory inventory;
-    Cart cart;
-    public EcommerceService(List<Product> products)
-    {
-        this.deliveryService = new DeliveryService();
-        this.inventory = new Inventory(products);
+    private final Inventory inventory;
+    private final DeliveryService deliveryService;
+    private final PaymentService paymentService;
+    private final CouponService couponService;
+    private final NotificationService notificationService;
 
+    public EcommerceService(List<Product> products) {
+        this.inventory = new Inventory(products);
+        this.deliveryService = new DeliveryService();
+        this.paymentService = new PaymentService();
+        this.couponService = new CouponService();
+        this.notificationService = new NotificationService();
+    }
+
+    public List<Product> searchProduct(String productName) {
+        System.out.println("Searching for product......");
+        return inventory.getProducts().stream()
+                .filter(p -> p.getName().equalsIgnoreCase(productName))
+                .collect(Collectors.toList());
+    }
+
+    public Cart createCart() {
+        return new Cart();
+    }
+
+    public void addProductToCart(Cart cart, Product product, int quantity) {
+        cart.addProductsToCart(product, quantity);
+    }
+
+    public Order checkoutCart(User user, Cart cart) {
+        // Here you could apply coupons, calculate final price, etc.
+        Order order = new Order(user, cart.getProducts());
+        return order;
+    }
+
+    public Order placeOrder(Order order) {
+        System.out.println("User paying for the order");
+        boolean paymentSuccess = paymentService.processPayment(order);
+
+        if (!paymentSuccess) {
+            order.setOrderStatus(OrderStatus.CANCELLED);
+            notificationService.notifyUser(order.getUser(), "Payment failed. Order cancelled.");
+            return order;
+        }
+
+        System.out.println("User marking payment as paid");
+        order.setPaymentStatus(PaymentStatus.PAID);
+        order.setOrderStatus(OrderStatus.COMPLETED);
+
+        System.out.println("Assigning delivery person and notifying user");
+        DeliveryPerson deliveryPerson = deliveryService.assignDeliveryPerson();
+        // Ideally you would store DeliveryPerson info in Order or DeliveryInfo
+        // For now, just notify
+        notificationService.notifyUser(order.getUser(), "Order placed successfully. Delivery assigned to " + deliveryPerson.getName());
+
+        return order;
+    }
+
+    public void cancelOrder(Order order) {
+        order.setOrderStatus(OrderStatus.CANCELLED);
+        paymentService.refund(order);
+        notificationService.notifyUser(order.getUser(), "Order has been cancelled.");
     }
 
     public Inventory getInventory() {
         return inventory;
     }
 
-    public Cart addProductsToCart(Map<Product, Integer> products)
-    {
-        cart = new Cart(products);
-        return cart;
-    }
-
-    public void setInventory(Inventory inventory) {
-        this.inventory = inventory;
-    }
-
     public DeliveryService getDeliveryService() {
         return deliveryService;
     }
-
-    public void setDeliveryService(DeliveryService deliveryService) {
-        this.deliveryService = deliveryService;
-    }
-
-
-    public List<Product> searchProduct(String productName)
-    {
-        List<Product> searchResults = new ArrayList<>();
-        for(Product product:this.inventory.getProducts())
-        {
-            if(Objects.equals(product.getName(), productName))
-            {
-                searchResults.add(product);
-            }
-        }
-        return searchResults;
-    }
-
-    public Order checkoutCart(User user, Cart cart)
-    {
-        return new Order(user,cart.getProducts());
-    }
-
-    public Order placeOrder(Order order)
-    {
-            //payment done
-            order.setOrderStatus(OrderStatus.COMPLETED);
-            return order;
-    }
-    public void cancelOrder(Order order)
-    {
-
-    }
-    public void returnOrder(Order order)
-    {
-
-    }
-    public void completeOrder(Order order)
-    {
-
-    }
-
 }

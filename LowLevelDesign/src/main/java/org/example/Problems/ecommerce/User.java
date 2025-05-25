@@ -1,46 +1,46 @@
 package org.example.Problems.ecommerce;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-//4:00
 public class User {
-    private String id;
+    private final String id;
     private String name;
     private String phoneNumber;
     private String email;
-    private List<String> address;
-    private List<Order> order;
+    private List<Address> addresses;
+    private List<Order> orders;
 
     public User(String name, String phoneNumber, String email) {
         this.id = UUID.randomUUID().toString();
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.email = email;
+        this.addresses = new ArrayList<>();
+        this.orders = new ArrayList<>();
     }
 
     public String getId() {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    // Other getters/setters omitted for brevity
+
+    public List<Address> getAddresses() {
+        return addresses;
     }
 
-    public String getName() {
-        return name;
+    public void addAddress(Address address) {
+        addresses.add(address);
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public List<Order> getOrders() {
+        return orders;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void addOrder(Order order) {
+        orders.add(order);
     }
 
     public String getEmail() {
@@ -49,21 +49,5 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public List<String> getAddress() {
-        return address;
-    }
-
-    public void setAddress(List<String> address) {
-        this.address = address;
-    }
-
-    public List<Order> getOrder() {
-        return order;
-    }
-
-    public void setOrder(List<Order> order) {
-        this.order = order;
     }
 }

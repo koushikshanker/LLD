@@ -1,45 +1,31 @@
 package org.example.Problems.ecommerce;
 
-import java.util.List;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.Map;
 
 public class Cart {
-    private String id;
-    private Map<Product, Integer> products;
+    private final Map<Product, Integer> products;
 
-    public Cart(Map<Product, Integer> products) {
-        this.products = products;
-    }
-
-    public double getPriceOfCart()
-    {
-        double totalPrice = 0.0;
-        for (Map.Entry<Product, Integer> entry : products.entrySet()) {
-            Product product = entry.getKey();
-            int quantity = entry.getValue();
-            totalPrice += product.getPrice() * quantity;
-        }
-        return totalPrice;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
+    public Cart() {
+        this.products = new HashMap<>();
     }
 
     public Map<Product, Integer> getProducts() {
-        return products;
+        return Collections.unmodifiableMap(products);
     }
 
-
-    public void addProductsToCart(Product product, Integer quantity) {
-        products.put(product,quantity);
+    public void addProductsToCart(Product product, int quantity) {
+        products.merge(product, quantity, Integer::sum);
     }
 
     public void removeProductFromCart(Product product) {
         products.remove(product);
+    }
+
+    public double getPriceOfCart() {
+        return products.entrySet().stream()
+                .mapToDouble(entry -> entry.getKey().getPrice() * entry.getValue())
+                .sum();
     }
 }

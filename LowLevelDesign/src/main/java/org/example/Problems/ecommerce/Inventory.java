@@ -1,30 +1,25 @@
 package org.example.Problems.ecommerce;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Inventory {
-    private String id;
-    private List<Product> products;
+    private final List<Product> products;
 
     public Inventory(List<Product> products) {
-        this.products = products;
+        this.products = new ArrayList<>(products);
     }
 
-    public void addProduct(Product product)
-    {
+    public synchronized void addProduct(Product product) {
         products.add(product);
     }
 
-    public void removeProduct(Product product)
-    {
+    public synchronized void removeProduct(Product product) {
         products.remove(product);
     }
 
     public List<Product> getProducts() {
-        return products;
-    }
-
-    public void setProducts(List<Product> products) {
-        this.products = products;
+        return Collections.unmodifiableList(products);
     }
 }
