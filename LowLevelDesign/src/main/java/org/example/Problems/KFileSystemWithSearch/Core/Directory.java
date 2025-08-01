@@ -1,4 +1,4 @@
-package org.example.Problems.FileSystemWithSearch.Core;
+package org.example.Problems.KFileSystemWithSearch.Core;
 
 import java.util.ArrayList;
 import java.util.List;

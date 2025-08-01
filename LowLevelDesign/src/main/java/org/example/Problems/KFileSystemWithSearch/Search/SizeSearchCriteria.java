@@ -1,6 +1,6 @@
-package org.example.Problems.FileSystemWithSearch.Search;
+package org.example.Problems.KFileSystemWithSearch.Search;
 
-import org.example.Problems.FileSystemWithSearch.Core.FileComponent;
+import org.example.Problems.KFileSystemWithSearch.Core.FileComponent;
 
 public class SizeSearchCriteria implements SearchCriteria {
     private long minSize;

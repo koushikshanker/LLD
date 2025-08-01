@@ -1,7 +1,7 @@
-package org.example.Problems.FileSystemWithSearch.Search;
+package org.example.Problems.KFileSystemWithSearch.Search;
 
-import org.example.Problems.FileSystemWithSearch.Core.FileComponent;
-import org.example.Problems.FileSystemWithSearch.Core.File;
+import org.example.Problems.KFileSystemWithSearch.Core.FileComponent;
+import org.example.Problems.KFileSystemWithSearch.Core.File;
 
 
 public class ExtensionSearchCriteria implements SearchCriteria {

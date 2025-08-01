@@ -1,7 +1,4 @@
-package org.example.Problems.FileSystemWithSearch.Core;
-
-import org.example.Problems.FileSystemWithSearch.Core.Directory;
-import org.example.Problems.FileSystemWithSearch.Core.FileComponent;
+package org.example.Problems.KFileSystemWithSearch.Core;
 
 public class File extends FileComponent {
     private long size;
