@@ -5,8 +5,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f82652bb-04d3-4a6f-9f7f-ae87730ba03b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/FileSystemWithSearch/Search/NameSearchCriteria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KFileSystemWithSearch/Search/SearchCriteria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KLRUCache/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KLRUCache/algoritms/DoublyLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KLRUCache/algoritms/DoublyLinkedListNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KLRUCache/algoritms/exceptions/InvalidElementException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KLRUCache/algoritms/exceptions/InvalidNodeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KLRUCache/cache/Cache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KLRUCache/cache/exceptions/NotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KLRUCache/cache/exceptions/StorageFullException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KLRUCache/cache/factories/CacheFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KLRUCache/cache/policies/EvictionPolicy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KLRUCache/cache/policies/LRUEvictionPolicy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KLRUCache/cache/storage/HashMapBasedStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KLRUCache/cache/storage/Storage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/Kecommerce/OnlineShoppingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/Kecommerce/OnlineShoppingServiceDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/Kecommerce/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/Kecommerce/OrderItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/Kecommerce/OrderStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/Kecommerce/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/Kecommerce/ShoppingCart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/Kecommerce/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/Kecommerce/payment/CreditCardPayment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/Kecommerce/payment/Payment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/kchessgame/Board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/kchessgame/ChessGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/kchessgame/ChessGameDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/kchessgame/Color.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/kchessgame/InvalidMoveException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/kchessgame/Move.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/kchessgame/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/kchessgame/pieces/Bishop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/kchessgame/pieces/King.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/kchessgame/pieces/Knight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/kchessgame/pieces/Pawn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/kchessgame/pieces/Piece.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/kchessgame/pieces/Queen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/kchessgame/pieces/Rook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowLevelDesign/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/FileSystemWithSearch/Core/Directory.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KFileSystemWithSearch/Core/Directory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/FileSystemWithSearch/Core/File.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KFileSystemWithSearch/Core/File.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/FileSystemWithSearch/Core/FileComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KFileSystemWithSearch/Core/FileComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/FileSystemWithSearch/Core/FileSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KFileSystemWithSearch/Core/FileSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/FileSystemWithSearch/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KFileSystemWithSearch/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/FileSystemWithSearch/Search/AndSearchCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KFileSystemWithSearch/Search/AndSearchCriteria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/FileSystemWithSearch/Search/ExtensionSearchCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KFileSystemWithSearch/Search/ExtensionSearchCriteria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/FileSystemWithSearch/Search/NameSearchCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KFileSystemWithSearch/Search/NameSearchCriteria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/FileSystemWithSearch/Search/OrSearchCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KFileSystemWithSearch/Search/OrSearchCriteria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/FileSystemWithSearch/Search/SearchCriteria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/FileSystemWithSearch/Search/SizeSearchCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KFileSystemWithSearch/Search/SizeSearchCriteria.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +65,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -55,8 +104,9 @@
     "Application.org.example.Problems.AmazonLockerChatgpt.Main.executor": "Run",
     "Application.org.example.Problems.FileSystemWithSearch.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "ft-file-system",
+    "git-widget-placeholder": "ft-chess-file",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/koushikshanker/LLD/LowLevelDesign/src/main/java/org/example/Problems",
     "onboarding.tips.debug.path": "/Users/koushikshanker/LLD/LowLevelDesign/src/main/java/org/example/Main.java",
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
@@ -65,10 +115,20 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.Problems.KRideSharing" />
       <recent name="org.example.Problems.AmazonLocker" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KFoodDeliveryService" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.Problems.KCalculator" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.org.example.Problems.FileSystemWithSearch.Main">
+  <component name="RunManager" selected="Application.org.example.Problems.AmazonLocker.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="LowLevelDesign" />
@@ -121,12 +181,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="org.example.Problems.FileSystemWithSearch.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Problems.FileSystemWithSearch.Main" />
+    <configuration name="org.example.Problems.KFileSystemWithSearch.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Problems.KFileSystemWithSearch.Main" />
       <module name="LowLevelDesign" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.Problems.FileSystemWithSearch.*" />
+          <option name="PATTERN" value="org.example.Problems.KFileSystemWithSearch.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -136,9 +196,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.org.example.Problems.FileSystemWithSearch.Main" />
-        <item itemvalue="Application.org.example.Problems.AmazonLockerChatgpt.Main (1)" />
         <item itemvalue="Application.org.example.Problems.AmazonLocker.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.org.example.Problems.KFileSystemWithSearch.Main" />
+        <item itemvalue="Application.org.example.Problems.AmazonLockerChatgpt.Main (1)" />
         <item itemvalue="Application.org.example.Problems.AmazonLockerChatgpt.Main" />
       </list>
     </recent_temporary>
@@ -183,17 +244,17 @@
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/FileSystemWithSearch/Search/ExtensionSearchCriteria.java</url>
+          <url>file://$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KFileSystemWithSearch/Search/ExtensionSearchCriteria.java</url>
           <line>6</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/FileSystemWithSearch/Core/FileSystem.java</url>
+          <url>file://$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KFileSystemWithSearch/Core/FileSystem.java</url>
           <line>19</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/FileSystemWithSearch/Core/FileSystem.java</url>
+          <url>file://$PROJECT_DIR$/LowLevelDesign/src/main/java/org/example/Problems/KFileSystemWithSearch/Core/FileSystem.java</url>
           <line>25</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>

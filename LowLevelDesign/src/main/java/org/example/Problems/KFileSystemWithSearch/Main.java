@@ -1,13 +1,13 @@
-package org.example.Problems.FileSystemWithSearch;
+package org.example.Problems.KFileSystemWithSearch;
 
-import org.example.Problems.FileSystemWithSearch.Core.Directory;
-import org.example.Problems.FileSystemWithSearch.Core.File;
-import org.example.Problems.FileSystemWithSearch.Core.FileComponent;
-import org.example.Problems.FileSystemWithSearch.Core.FileSystem;
-import org.example.Problems.FileSystemWithSearch.Search.AndSearchCriteria;
-import org.example.Problems.FileSystemWithSearch.Search.ExtensionSearchCriteria;
-import org.example.Problems.FileSystemWithSearch.Search.SearchCriteria;
-import org.example.Problems.FileSystemWithSearch.Search.SizeSearchCriteria;
+import org.example.Problems.KFileSystemWithSearch.Core.Directory;
+import org.example.Problems.KFileSystemWithSearch.Core.File;
+import org.example.Problems.KFileSystemWithSearch.Core.FileComponent;
+import org.example.Problems.KFileSystemWithSearch.Core.FileSystem;
+import org.example.Problems.KFileSystemWithSearch.Search.AndSearchCriteria;
+import org.example.Problems.KFileSystemWithSearch.Search.ExtensionSearchCriteria;
+import org.example.Problems.KFileSystemWithSearch.Search.SearchCriteria;
+import org.example.Problems.KFileSystemWithSearch.Search.SizeSearchCriteria;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package org.example.Problems.FileSystemWithSearch.Core;
+package org.example.Problems.KFileSystemWithSearch.Core;
 
 public abstract class FileComponent {
     protected String name;
