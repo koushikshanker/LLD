@@ -46,6 +46,8 @@ public class SplitwiseService {
         }
     }
 
+    //This function doesn't handle splits of mixed type like 3 users->1 user has exact split and 2 persons
+    //have percentage split. Correct is written in SplitExpenseAlt class
     private void splitExpense(Expense expense) {
         double totalAmount = expense.getAmount();
         List<Split> splits = expense.getSplits();
