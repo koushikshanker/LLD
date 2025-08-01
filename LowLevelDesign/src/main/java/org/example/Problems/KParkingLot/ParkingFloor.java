@@ -1,4 +1,4 @@
-package org.example.Problems.ParkingLot;
+package org.example.Problems.KParkingLot;
 
 import java.util.List;
 import java.util.UUID;

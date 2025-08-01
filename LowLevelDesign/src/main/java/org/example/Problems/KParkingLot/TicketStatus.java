@@ -1,4 +1,4 @@
-package org.example.Problems.ParkingLot;
+package org.example.Problems.KParkingLot;
 
 public enum TicketStatus {
     IN_PROGRESS,

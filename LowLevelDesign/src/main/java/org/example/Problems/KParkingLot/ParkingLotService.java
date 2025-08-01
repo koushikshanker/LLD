@@ -1,7 +1,6 @@
-package org.example.Problems.ParkingLot;
+package org.example.Problems.KParkingLot;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 public class ParkingLotService {
     private ParkingLot parkingLot;

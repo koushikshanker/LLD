@@ -1,6 +1,4 @@
-package org.example.Problems.ParkingLot;
-
-import java.util.List;
+package org.example.Problems.KParkingLot;
 
 public class SpotAssignmentStrategyService implements SpotAssignmentStrategy{
     private ParkingLot parkingLot;
