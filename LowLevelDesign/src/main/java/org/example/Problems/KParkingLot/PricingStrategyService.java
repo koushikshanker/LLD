@@ -1,4 +1,4 @@
-package org.example.Problems.ParkingLot;
+package org.example.Problems.KParkingLot;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
