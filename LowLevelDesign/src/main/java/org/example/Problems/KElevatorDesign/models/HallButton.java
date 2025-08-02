@@ -1,0 +1,49 @@
+package org.example.Problems.KElevatorDesign.models;
+
+import org.example.Problems.KElevatorDesign.enums.Direction;
+import org.example.Problems.KElevatorDesign.interfaces.Button;
+
+public class HallButton implements Button {
+    private boolean status;
+
+    private Direction direction;
+
+    public HallButton(boolean status, Direction direction) {
+        this.status = status;
+        this.direction = direction;
+    }
+    public HallButton() {
+    }
+
+    public Direction getDirection() {
+        return direction;
+    }
+
+    public void setDirection(Direction direction) {
+        this.direction = direction;
+    }
+
+
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    @Override
+    public boolean isPressed() {
+        return status;
+    }
+
+    @Override
+    public boolean press() {
+        if (!status) {
+            status = true;
+            return true;
+        }
+        return false;
+    }
+
+    public void reset() {
+        status = false;
+    }
+}
